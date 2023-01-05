@@ -1,0 +1,9 @@
+objects = rd_check_test.o
+edit : $(objects)
+	gcc -o test $(objects) lex.yy.c -lfl
+rd_check.o : token.h
+
+
+.PHONY : clean
+clean :
+	-rm test $(objects)
